@@ -8,109 +8,120 @@
     font-family: 'Press Start 2P', cursive;
     overflow:hidden;
 }
-/* body{
-    background-image: url(photo/background.jpg);
-    background-repeat:no-repeat; 
-    background-size: cover;
-    background-position:center; 
-    background-attachment:fixed; 
-} */
-body{ /*for snake*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.title{
+    margin: 10px;
+    padding: 10px;
 }
-canvas{
-    background:#033911;
-    border: 1px solid #111;
-    border: 3px;
-    width: 1250px;
-    height: 750px;
-    margin: 0 auto;
-}
-.main{
+body{
     display: flex;
-    text-align: center;
-    justify-content: center;
+    align-items: center; 
     flex-direction: column;
     background-image: url(photo/background.jpg);
-    background-repeat:no-repeat; 
     background-size: cover;
-    background-position:center; 
-    background-attachment:fixed;
     width: 100vw;
     height: 100vh;
 }
-a, a:active, a:visited {
+.gamePage{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+}
+#game_area{
+    margin: 15px auto;
+    background:#033911;
+    border: 1px solid #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.rel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons{
+    display:flex;
+    justify-content: space-between;
+}
+
+.btn {
     margin: 20px auto 20px auto;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content{
+    background-color: rgba(5, 254, 71, 0.1);
+    color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 54px -22px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 54px -22px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 54px -22px rgba(0, 0, 0, 1);
+}
+.btn:hover {
+    color:#00b700; 
+    letter-spacing: 5px;
+    transition: 0.1s ease-in-out;
+}
+.btn_start {
+    margin: 30px auto;
     font-size: 35px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     cursor: pointer;
 }
-a:hover{
+
+.btn_start:hover {
     color:rgb(0, 183, 0); 
     letter-spacing: 5px;
-    transition: s ease-in-out;
+    transition:  ease-in-out;
 }
-.title{
-    margin: 20px auto 20px auto;
-    text-shadow: 2px 2px #033911;
-}
-/* .game_area{
-    width: 1250px;
-    height: 750px;
-    background-color: black; 
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    border-radius: 5px; 
-} */
-.scoreboard{
-    width: 1250px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px auto;
-    padding: 0 20px 0 20px;
+.btn{
+    font-size: 20px;
     color: rgb(255, 255, 255);
-    text-shadow: 2px 2px #033911;
-    font-size: 25px;
-}
-.score{
-    display: flex;
-    justify-content: center;
+    background-color: rgb(61, 61, 61);
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
     align-items: center;
-}
-.life{
-    height: 30px;
-}
-.fruit_score{
-    height: 50px;
-}
-.start{
-    display: flex;
-    background-color: rgba(11, 92, 12, 0.75);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 9999;
-}
-button{
     justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    margin: auto;
-    padding: 20px;
-    color: rgb(0, 0, 0);
-    text-shadow: 0px 1px #116828;
-    background-color: rgb(255, 255, 255);
-    border-radius: 3px;
-    border-style: none;
+    padding: 10px;
 }
-button:hover{
-    transition: 0.2s ease-in;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); ;
+.btn_restart:hover {
+    color:rgb(9, 172, 3); 
+    background-color: rgb(46, 46, 46);
+    transition:  ease-in-out;
+}
+.result img{
+    height: 60px;
+    width: 60px;
+}
+
+#fruit, #virus {
+    display: none;
+    height: 80px;
+    width: 80px;
+}
+
+#snake {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+#scoreModal {
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+}
+
+#pauseBtn:hover, #resumeBtn:hover {
+    background-color: #ccc;
+}
+h2 {
+    color: #11d011;
+    font-size:3rem;
 }
