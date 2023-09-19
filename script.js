@@ -250,6 +250,11 @@ function virusPosition() {
 function drawVirus() {
     context.drawImage(virus, virusX, virusY, scale, scale);
 }
+function drawExtraVirus() {
+    for (let i=0; i<4; i++){
+        context.drawImage(virus, virusY, virusX, scale, scale);
+    }
+}
 //------------------------------------------------------FRUIT-----------------------------------------------------------//
 //generate random fruit position within canvas boundaries
 function fruitPosition() {
@@ -271,6 +276,7 @@ function changeSize(){
         columns = canvas.width / scale;
         min = scale / 10; 
         max = rows - min;
+        drawExtraVirus();
     }
     if(checkCollision){
         gameStarted=true;
