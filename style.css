@@ -29,7 +29,8 @@ body{
 }
 #game_area{
     margin: 15px auto;
-    background:#033911;
+    background: url(photo/game_area_bg.jpg);
+    background-blend-mode: color-burn;
     border: 1px solid #000000;
     background-repeat: no-repeat;
     background-size: cover;
@@ -77,8 +78,7 @@ body{
 
 .btn_start:hover {
     color:rgb(0, 183, 0); 
-    letter-spacing: 5px;
-    transition:  ease-in-out;
+    transition: 1s ease-in-out;
 }
 .btn{
     font-size: 20px;
@@ -101,7 +101,7 @@ body{
     width: 60px;
 }
 
-#fruit, #virus {
+#fruit, #virus, #proFruit {
     display: none;
     height: 80px;
     width: 80px;

@@ -18,7 +18,8 @@
         </div>
         <canvas id="game_area" width="800" height="600"></canvas>
         <img id="virus" src="photo/apple.png" alt="apple">
-        <img id="fruit" src="photo/score_point.png" alt="chicken">     
+        <img id="fruit" src="photo/score_point.png" alt="chicken">  
+        <img id="proFruit" src="photo/proFruit.png" alt="proFruit">   
         <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -26,7 +27,7 @@
                         <p>Game Over! Your Score is: <span id="scoreModal"></span></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn modal-btn" data-dismiss="modal">RESTART</button>
+                        <button type="button" id="modalBtn" class="btn modal-btn modalBtn" data-dismiss="modal">RESTART</button>
                     </div>
                 </div>
             </div>
